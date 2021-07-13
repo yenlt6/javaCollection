@@ -25,7 +25,8 @@ public class PersonRepository {
         File file;
         try {
 //      file = ResourceUtils.getFile("classpath:static/person.json");
-            file = ResourceUtils.getFile("classpath:static/person.json");
+            file = ResourceUtils.getFile("classpath:static/personsmall.json");
+//            file = ResourceUtils.getFile("classpath:static/person.json");
             people.addAll(mapper.readValue(file, new TypeReference<List<Person>>() {
             }));
         } catch (JsonParseException e) {
